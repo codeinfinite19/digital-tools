@@ -5,65 +5,43 @@ const Cart = ({ cart, handleRemove, handleCheckout }) => {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-4xl mx-auto px-6">
 
-      <div className="bg-white p-6 rounded-xl border shadow-sm">
+      <h2 className="text-xl font-semibold mb-6">Your Cart</h2>
 
-        <h2 className="text-lg font-semibold mb-6">Your Cart</h2>
+      <div className="bg-white p-6 rounded-xl shadow">
 
         {cart.length === 0 ? (
-          <p className="text-gray-400">No items added</p>
+          <p className="text-gray-500">Cart is empty</p>
         ) : (
           <>
-           
-            <div className="space-y-4">
-              {cart.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex justify-between items-center bg-gray-50 p-4 rounded-lg"
-                >
-
-                  
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={item.icon}
-                      className="w-10 h-10 rounded-full bg-white p-1"
-                    />
-
-                    <div>
-                      <h3 className="text-sm font-medium">
-                        {item.name}
-                      </h3>
-                      <p className="text-xs text-gray-400">
-                        ${item.price}
-                      </p>
-                    </div>
-                  </div>
-
-                 
-                  <button
-                    onClick={() => handleRemove(item.id)}
-                    className="text-pink-500 text-sm font-medium hover:underline"
-                  >
-                    Remove
-                  </button>
-
+            {cart.map(item => (
+              <div
+                key={item.id}
+                className="flex justify-between items-center mb-4 p-3 bg-gray-100 rounded"
+              >
+                <div>
+                  <h3 className="font-medium">{item.name}</h3>
+                  <p className="text-sm text-gray-500">${item.price}</p>
                 </div>
-              ))}
+
+                <button
+                  onClick={() => handleRemove(item.id)}
+                  className="text-red-500"
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
+
+            <div className="flex justify-between mt-6 font-semibold">
+              <span>Total:</span>
+              <span>${total}</span>
             </div>
 
-            
-            <div className="flex justify-between mt-6 text-sm">
-              <span className="text-gray-400">Total:</span>
-              <span className="font-semibold text-gray-700">
-                ${total}
-              </span>
-            </div>
-
-           
             <button
               onClick={handleCheckout}
-              className="w-full mt-6 py-3 rounded-full text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:opacity-90"
+              className="w-full mt-4 py-3 rounded-full text-white bg-gradient-to-r from-purple-500 to-pink-500"
             >
               Proceed to Checkout
             </button>
@@ -71,7 +49,6 @@ const Cart = ({ cart, handleRemove, handleCheckout }) => {
         )}
 
       </div>
-
     </div>
   );
 };

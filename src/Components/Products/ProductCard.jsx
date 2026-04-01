@@ -1,54 +1,65 @@
 import React from "react";
 
-const ProductCard = ({ product, handleAdd }) => {
+const ProductCard = ({ product, handleAdd, cart }) => {
+
+  const isAdded = cart.find(item => item.id === product.id);
+
   return (
-    <div className="bg-white p-6 rounded-xl shadow-sm relative hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+    <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition-all duration-300 relative">
 
-     
-      <span
-        className={`absolute top-4 right-4 text-xs px-3 py-1 rounded-full
-        ${
-          product.tag === "best"
-            ? "bg-yellow-100 text-yellow-600"
-            : product.tag === "popular"
-            ? "bg-purple-100 text-purple-600"
-            : "bg-green-100 text-green-600"
-        }`}
-      >
-        {product.tagType}
-      </span>
-
-     
-      <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-3">
-        <img src={product.icon} className="w-6" />
-      </div>
+     <span
+  className={`absolute top-4 right-4 text-xs px-3 py-1 rounded-full 
+  ${
+    product.tagType === "Popular"
+      ? "bg-purple-100 text-purple-600"
+      : product.tagType === "New"
+      ? "bg-green-100 text-green-600"
+      : product.tagType === "Best Seller"
+      ? "bg-yellow-100 text-yellow-600"
+      : "bg-gray-100 text-gray-500"
+  }`}
+>
+  {product.tagType}
+</span>
 
       
-      <h3 className="font-semibold">{product.name}</h3>
-      <p className="text-sm text-gray-500">{product.description}</p>
+      <div className="w-12 h-12 mb-4">
+        <img src={product.icon} alt="" className="w-full h-full object-contain" />
+      </div>
 
-      <p className="font-bold mt-2">
-        ${product.price}
-        <span className="text-sm text-gray-400">/{product.period}</span>
+     
+      <h2 className="text-lg font-semibold mb-2">{product.name}</h2>
+
+      
+      <p className="text-sm text-gray-500 mb-3">
+        {product.description}
       </p>
 
      
-      <ul className="text-sm mt-2 space-y-1">
+      <h3 className="font-bold text-xl mb-4">
+        ${product.price}
+        <span className="text-sm text-gray-400">/{product.period}</span>
+      </h3>
+
+      
+      <ul className="text-sm text-gray-500 space-y-1 mb-5">
         {product.features.map((f, i) => (
-          <li key={i} className="flex gap-2">
-            <span className="text-green-500">✔</span>
-            {f}
+          <li key={i} className="flex items-center gap-2">
+            ✔ {f}
           </li>
         ))}
       </ul>
 
-      
+     
       <button
         onClick={() => handleAdd(product)}
-        className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white py-2 rounded-full
-        hover:opacity-90 transition-opacity duration-300"
+        disabled={isAdded}
+        className={`w-full py-2 rounded-full text-white transition-all duration-300
+        ${isAdded 
+          ? "bg-green-600 scale-105" 
+          : "bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105"}`}
       >
-        Buy Now
+        {isAdded ? "✔ Added to Cart" : "Buy Now"}
       </button>
 
     </div>
