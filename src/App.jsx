@@ -6,6 +6,7 @@ import Ratting from './Components/herocard/Ratting';
 import Steps from './Components/steps/Steps';
 import Premium from './Components/premium/Premium';
 import Workflow from './Components/workflow/Workflow';
+import Products from './Components/products/Products';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <NavBar />
     <HeroCard />
     <Ratting />
+    <Products />
     <Steps />
     <Premium />
     <Workflow />

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality content with AI tools.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "Popular",
+    "features": [
+      "100+ templates",
+      "SEO optimization",
+      "Export to PDF"
+    ],
+    "icon": "/products/writing_23274001.png"
+  },
+  {
+    "id": 2,
+    "name": "Design Templates Pack",
+    "description": "Professional templates for designers.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "best",
+    "tagType": "Best Seller",
+    "features": [
+      "500+ templates",
+      "Figma support",
+      "Commercial use"
+    ],
+    "icon": "/products/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Premium Stock Assets",
+    "description": "Access millions of high-quality assets.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "New",
+    "features": [
+      "10M+ assets",
+      "Commercial use",
+      "No attribution"
+    ],
+    "icon": "/products/portfolio.png"
+  },
+  {
+    "id": 4,
+    "name": "Automation Toolkit",
+    "description": "Automate tasks and workflows easily.",
+    "price": 79,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "Popular",
+    "features": [
+      "50+ automation tools",
+      "API access",
+      "Custom workflows"
+    ],
+    "icon": "/products/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "Social Media Content Kit",
+    "description": "Create engaging social media content.",
+    "price": 39,
+    "period": "monthly",
+    "tag": "best",
+    "tagType": "Best Seller",
+    "features": [
+      "5000+ assets",
+      "Scheduler included",
+      "Analytics dashboard"
+    ],
+    "icon": "/products/social-media.png"
+  },
+  {
+    "id": 6,
+    "name": "Shopping Cart System",
+    "description": "Complete eCommerce cart solution.",
+    "price": 25,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "New",
+    "features": [
+      "Add/remove items",
+      "Checkout system",
+      "Responsive design"
+    ],
+    "icon": "/products/shopping-cart.png"
+  }
+]

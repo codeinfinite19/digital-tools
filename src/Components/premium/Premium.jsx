@@ -59,7 +59,7 @@ const Premium = () => {
 
   return (
     <div className="bg-gray-10 py-20">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-6 text-center ">
         
         <h1 className="text-3xl font-bold mb-3">
           Simple, Transparent Pricing
