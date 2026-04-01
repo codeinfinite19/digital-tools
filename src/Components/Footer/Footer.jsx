@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaYoutube, FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     
@@ -40,12 +42,24 @@ const Footer = () => {
     
     <nav>
       <h6 className="text-white font-semibold mb-3">Social</h6>
-      <div className="grid grid-flow-col gap-4">
-        {/* icons same rekhe dilam */}
-        <a>...</a>
-        <a>...</a>
-        <a>...</a>
-      </div>
+
+      <div className="flex gap-3">
+
+  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+    <FaYoutube className="text-black text-sm" />
+  </div>
+
+  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+    <FaFacebookF className="text-black text-sm" />
+  </div>
+
+  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+    <FaXTwitter className="text-black text-sm" />
+  </div>
+
+</div>
+
+
     </nav>
 
   </div>

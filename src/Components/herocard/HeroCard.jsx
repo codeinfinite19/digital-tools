@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "../../assets/banner.png";
+import { CircleDashed, TvMinimal } from "lucide-react";
 
 const HeroCard = () => {
   return (
@@ -10,8 +11,8 @@ const HeroCard = () => {
        
         <div>
           
-          <div className="inline-block bg-purple-100 text-purple-600 text-sm px-4 py-1 rounded-full mb-4">
-          New: AI-Powered Tools Available
+          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 text-sm px-4 py-1 rounded-full mb-4">
+         <CircleDashed /> New: AI-Powered Tools Available
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
@@ -27,8 +28,8 @@ const HeroCard = () => {
               Explore Products
             </button>
 
-            <button className="border border-purple-500 text-purple-600 px-6 py-3 rounded-full hover:bg-purple-50">
-              Watch Demo
+            <button className=" inline-flex items-center gap-2 border border-purple-500 text-purple-600 px-6 py-3 rounded-full hover:bg-purple-50">
+             <TvMinimal /> Watch Demo
             </button>
           </div>
 
